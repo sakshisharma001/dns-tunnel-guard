@@ -1,4 +1,4 @@
-# DNS-Shield ML 🛡️
+# DNS Tunnel Guard 🛡️
 ### Autonomous DNS Tunneling & Exfiltration Prevention Console
 
 DNS-Shield ML is a light-weight, high-performance cybersecurity application that detects and blocks DNS tunneling and data exfiltration in real-time. Built with a modern **Vite React** frontend and a robust **FastAPI** backend, it utilizes a custom-trained **Decision Tree Machine Learning Model** to analyze the Shannon Entropy, digit ratio, and string characteristics of active DNS queries to stop unauthorized data egress instantly.
