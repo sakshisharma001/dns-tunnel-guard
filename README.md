@@ -67,27 +67,3 @@ Open **[http://localhost:5174/](http://localhost:5174/)** (or whichever port Vit
 
 ---
 
-## ⬆️ Steps to Push to GitHub
-
-Prepare your project and upload it to a new repository on GitHub:
-
-```bash
-# 1. Initialize a new local Git repository
-git init
-
-# 2. Add all files to staging (uses our updated .gitignore to avoid uploading node_modules or pycache)
-git add .
-
-# 3. Commit your changes
-git commit -m "feat: Initial commit of DNS-Shield ML Apple Light Mode Console"
-
-# 4. Create and set branch to main
-git branch -M main
-
-# 5. Link your local repository to your remote GitHub repository
-git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git
-
-# 6. Push your project to GitHub
-git push -u origin main
-```
-*(Replace `YOUR_USERNAME` and `YOUR_REPOSITORY_NAME` with your actual GitHub username and target repository name).*
