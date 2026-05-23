@@ -1,7 +1,9 @@
 # DNS Tunnel Guard 🛡️
 ### Autonomous DNS Tunneling & Exfiltration Prevention Console
 
-DNS-Shield ML is a light-weight, high-performance cybersecurity application that detects and blocks DNS tunneling and data exfiltration in real-time. Built with a modern **Vite React** frontend and a robust **FastAPI** backend, it utilizes a custom-trained **Decision Tree Machine Learning Model** to analyze the Shannon Entropy, digit ratio, and string characteristics of active DNS queries to stop unauthorized data egress instantly.
+DNS Tunnel Guard is a lightweight cybersecurity application that detects and blocks DNS tunneling and data exfiltration attacks in real time. Built with a modern **Vite React** frontend and a robust **FastAPI** backend, it utilizes a custom-trained **Decision Tree Machine Learning Model** to analyze the Shannon Entropy, digit ratio, and string characteristics of active DNS queries to stop unauthorized data egress instantly.
+
+This project is an educational prototype inspired by real-world DNS security and anomaly detection systems.
 
 ---
 
@@ -17,6 +19,29 @@ DNS-Shield ML is a light-weight, high-performance cybersecurity application that
 - **Interactive Leak Simulator**: Lets you inject sensitive payloads (keys, tokens, credentials) to verify machine learning blocking logic in real-time.
 - **Explainable AI (XAI)**: Breaks down the decision-making rules, Shannon entropy levels, and features for any selected query.
 - **Traffic Ratio Analytics**: Provides clean visual distribution stats on standard versus exfiltration traffic.
+
+---
+
+## 🧠 How It Works
+1. DNS query is captured in real-time
+2. Feature extraction is performed:
+   - Length
+   - Digit ratio
+   - Shannon entropy
+   - Subdomain structure
+3. Decision Tree model analyzes features
+4. System classifies traffic:
+   - SAFE → PASS
+   - MALICIOUS → BLOCK + ALERT
+  
+---
+
+## 🎯 Problem It Solves
+
+DNS traffic is trusted by default in most networks.  
+Attackers exploit this to secretly exfiltrate data using DNS tunneling.
+
+This system detects such hidden data leaks in real-time.
 
 ---
 
@@ -36,6 +61,14 @@ DNS-Shield ML is a light-weight, high-performance cybersecurity application that
 ├── package.json                # Frontend package dependencies
 └── README.md                   # Setup & documentation
 ```
+
+---
+
+## 📦 Prerequisites
+
+- Python 3.10+
+- Node.js 18+
+- npm
 
 ---
 
@@ -67,3 +100,8 @@ Open **[http://localhost:5174/](http://localhost:5174/)** (or whichever port Vit
 
 ---
 
+## 🚀 Future Improvements
+
+- Deep Learning-based detection (LSTM/Transformer)
+- Live packet inspection with Scapy/Npcap
+- Cloud dashboard for enterprise monitoring
